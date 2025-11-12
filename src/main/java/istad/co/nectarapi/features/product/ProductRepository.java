@@ -1,18 +1,19 @@
-package istad.co.nectarapi.features.category;
+package istad.co.nectarapi.features.product;
 
-import istad.co.nectarapi.domain.Category;
+import istad.co.nectarapi.domain.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.Optional;
 
-public interface CategoryRepository extends JpaRepository<Category, Integer> {
+
+public interface ProductRepository extends JpaRepository<Product, Integer> {
+    Optional<Product> findByUuid(String uuid);
     boolean existsByName(String name);
     boolean existsByUuid(String uuid);
-    Optional<Category> findByUuid(String uuid);
 
     @Modifying
-    @Query("UPDATE Category c SET c.isDeleted = true WHERE c.uuid = ?1")
+    @Query("UPDATE Product p SET p.isDeleted= true WHERE p.uuid = ?1")
     void deleteSoftByUuid(String uuid);
 }

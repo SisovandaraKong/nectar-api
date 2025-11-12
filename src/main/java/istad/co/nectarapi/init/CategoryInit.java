@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.UUID;
 
 @Component
 @RequiredArgsConstructor
@@ -37,6 +38,7 @@ public class CategoryInit {
         Category category = new Category();
         category.setName(name);
         category.setDescription(description);
+        category.setUuid(UUID.randomUUID().toString());
         category.setIsDeleted(false);
         return category;
     }
