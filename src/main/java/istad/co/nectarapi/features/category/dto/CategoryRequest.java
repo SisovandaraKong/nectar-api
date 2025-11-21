@@ -10,6 +10,8 @@ public record CategoryRequest(
 
         @NotBlank(message = "Description is required")
         @Size(min = 5, max = 200, message = "Description must be between 5 and 200 characters")
-        String description
+        String description,
+
+        String imageUrl
 ) {
 }

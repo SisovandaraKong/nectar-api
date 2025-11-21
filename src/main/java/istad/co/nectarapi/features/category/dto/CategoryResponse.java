@@ -6,6 +6,7 @@ public record CategoryResponse (
         String uuid,
         String name,
         String description,
+        String imageUrl,
         AuditResponse audit
 ) {
 }

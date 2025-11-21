@@ -11,5 +11,4 @@ public class NectarApiApplication {
     public static void main(String[] args) {
         SpringApplication.run(NectarApiApplication.class, args);
     }
-
 }
