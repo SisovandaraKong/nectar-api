@@ -39,7 +39,6 @@ import java.util.UUID;
 @EnableMethodSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
-
     private final PasswordEncoder passwordEncoder;
     private final UserDetailsService userDetailsService;
 
