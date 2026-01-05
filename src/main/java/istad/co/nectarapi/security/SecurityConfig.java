@@ -76,6 +76,10 @@ public class SecurityConfig {
                         .requestMatchers("/api/v1/auth/**").permitAll()
                         .requestMatchers("/api/bakong/**").permitAll()
                         .requestMatchers("/api/v1/bakong/**").permitAll()
+                        .requestMatchers("/swagger-ui.html").permitAll()
+                        .requestMatchers("/swagger-ui/**").permitAll()
+                        .requestMatchers("/v3/api-docs/**").permitAll()
+
 
                         // Upload file
                         .requestMatchers("/api/v1/files/**").permitAll()
